@@ -16,10 +16,3 @@ export default async function handler(
   }
 }
 
-
-
-
-//     if(req.method==="GET"){
-//         const profile=await prisma.profile.findMany();
-//         res.status(200).json(profile)
-
