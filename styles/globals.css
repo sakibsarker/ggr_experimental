@@ -1,3 +1,59 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.container{
+    display:flex;
+}
+main{
+    width: 100%;
+    padding: 20px;
+}
+.sidebar{
+    background: #f2f2fe;
+    color: #0d0d0d;
+    height: 100vh;
+    width: 200px;
+    transition: all 0.5s;
+}
+.top_section{
+    display: flex;
+    align-items:center;
+    padding:20px 15px;
+}
+.logo{
+    font-size: 30px;
+}
+.bars{
+    display: flex;
+    font-size: 25px;
+    margin-left: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.link{
+    display: flex;
+    color: #0d0d0d;
+    padding: 10px 15px;
+    gap: 15px;
+    transition: all 0.5s;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.link:hover{
+    background:#4040ec;
+    color: #ffffff;
+    transition: all 0.5s;
+}
+.active{
+    background: #4040ec;
+    color: #d9d9d9;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/* .icon, .link_text{
+    font-size: 20px;
+} */
+.icon{
+    font-size: 25px;
+}
+.link_text{
+    font-size: 18px;
+}

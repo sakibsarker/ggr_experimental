@@ -7,9 +7,9 @@ import usSwr from 'swr'
 //   Email:string,
 // }
 
-const orderitem = () => {
+const orderitem: NextPage = () => {
 
-  const fetcher=(url)=>fetch(url).then((res)=>res.json())
+  const fetcher=(url:string)=>fetch(url).then((res)=>res.json())
   const{data,error}=usSwr("/api/orderitems",fetcher);
   console.log(data)
   return (

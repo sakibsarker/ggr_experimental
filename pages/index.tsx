@@ -2,11 +2,11 @@ import { NextPage } from 'next';
 import Image from 'next/image'
 import usSwr from 'swr'
 
-interface Profile{
-  id:number,
-  Name:string,
-  Email:string,
-}
+// interface Profile{
+//   id:number,
+//   Name:string,
+//   Email:string,
+// }
 
 const Home: NextPage = () => {
 
