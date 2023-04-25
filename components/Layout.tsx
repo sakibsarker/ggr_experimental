@@ -2,10 +2,12 @@ import React, { ReactNode,useState } from 'react'
 import {FaBox,FaBars,FaUserAlt,FaRegChartBar,FaCommentAlt,FaShoppingBag,FaThList} from 'react-icons/fa'
 import { AiOutlineQrcode,AiTwotoneSetting } from "react-icons/ai";
 import Link from 'next/link'
+import { useRouter } from 'next/router';
 interface GlobalLayoutProps{
     children:ReactNode
 }
 const Layout = ({children}:GlobalLayoutProps) => {
+    const router=useRouter()
     const[isOpen,setIsopen]=useState(false)
     const toggle=()=>setIsopen(!isOpen)
     const menuItem=[
@@ -62,7 +64,7 @@ const Layout = ({children}:GlobalLayoutProps) => {
         </div>
         {
                     menuItem.map((item,index)=>(
-                        <Link href={item.path} key={index} className="link" activeclassName="active">
+                        <Link href={item.path} key={index} className={`${router.pathname===item.path?"active":''} link`}>
                             <div className="icon">
                                 {item.icon}
                             </div>
@@ -79,4 +81,3 @@ const Layout = ({children}:GlobalLayoutProps) => {
 }
 
 export default Layout
-// activeclassName="active"
